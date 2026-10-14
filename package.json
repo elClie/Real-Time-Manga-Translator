@@ -1,0 +1,13 @@
+{
+  "name": "real-time-manga-translator",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build_ext.mjs"
+  },
+  "dependencies": {
+    "@techstark/opencv-js": "4.11.0-release.1",
+    "clipper-lib": "^6.4.2",
+    "onnxruntime-web": "^1.23.0"
+  }
+}

@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 14px/1.45 system-ui, sans-serif;
+  color: #ddd;
+  background: #111;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 0 0 20px;
+}
+
+h2 {
+  font-size: 15px;
+  margin: 0 0 6px;
+}
+
+section {
+  padding: 16px;
+  margin-bottom: 16px;
+  border: 1px solid #2a2a2a;
+  background: #161616;
+}
+
+a {
+  color: #8bf;
+}
+
+.hint {
+  margin: 0 0 12px;
+  color: #999;
+  font-size: 13px;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+input[type="password"],
+input[type="text"] {
+  flex: 1;
+  min-width: 0;
+  padding: 7px 10px;
+  border: 1px solid #444;
+  background: #0c0c0c;
+  color: #eee;
+  font: 13px ui-monospace, monospace;
+}
+
+button {
+  border: 1px solid #555;
+  background: #222;
+  color: #eee;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: #888;
+}
+
+button.primary {
+  border-color: #3a6;
+  background: #1b3326;
+}
+
+.status {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: #999;
+  min-height: 1em;
+}
+
+.status.ok {
+  color: #6c9;
+}
+
+.status.warn {
+  color: #e96;
+}
+
+.status.error {
+  color: #f66;
+}
+
+#overlay-key {
+  cursor: pointer;
+}
+
+#overlay-key:focus {
+  outline: 2px solid #3a6;
+}
+
+.check {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.site {
+  padding: 10px 0;
+  border-top: 1px solid #2a2a2a;
+}
+
+.site:first-child {
+  border-top: 0;
+}
+
+.site-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+.cal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0 4px 12px;
+  color: #bbb;
+  font-size: 13px;
+}
+
+.cal .when {
+  color: #777;
+  margin-left: 8px;
+}
+
+.site button,
+.cal button {
+  padding: 2px 8px;
+  font-size: 12px;
+}
+
+.empty {
+  color: #777;
+  font-size: 13px;
+}

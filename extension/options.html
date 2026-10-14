@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Panel Probe — Settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Panel Probe settings</h1>
+
+      <section>
+        <h2>Gemini API key</h2>
+        <p class="hint">
+          Stored in this browser's extension storage and sent only to Google's Gemini API. Get one at <a href="https://aistudio.google.com/apikey" target="_blank" rel="noreferrer">Google AI Studio</a>.
+        </p>
+        <div class="row">
+          <input id="key" type="password" autocomplete="off" spellcheck="false" placeholder="Paste your API key" />
+          <button type="button" id="key-show">Show</button>
+          <button type="button" id="key-save" class="primary">Save</button>
+          <button type="button" id="key-remove">Remove</button>
+        </div>
+        <p id="key-status" class="status"></p>
+        <p id="app-status" class="status"></p>
+      </section>
+
+      <section>
+        <h2>Finding the manga pages</h2>
+        <p class="hint">
+          The first time you use a site, the popup looks for the images with manga panels in them and remembers their
+          dimension. If it can't tell, it asks you to pick the preview that looks like a manga page. If a later chapter
+          uses a different dimension, this happens once more and both are remembered.
+        </p>
+        <label class="check">
+          <input id="gemini-guess" type="checkbox" />
+          When the popup can't tell, let Gemini guess before asking you (slower, ~8 s, 1 API call)
+        </label>
+      </section>
+
+      <section>
+        <h2>Overlay shortcut</h2>
+        <p class="hint">Shows or hides the translations on the page. Click the box and press a key combination.</p>
+        <div class="row">
+          <input id="overlay-key" type="text" readonly placeholder="Off — click and press keys" />
+          <button type="button" id="overlay-key-clear">Turn off</button>
+        </div>
+        <p id="overlay-key-status" class="status"></p>
+      </section>
+
+      <section>
+        <h2>Text reading</h2>
+        <label class="check">
+          <input id="fast-reread" type="checkbox" />
+          Faster second reads — when a bubble is re-read with the manga OCR model, take the single most likely reading instead
+          of comparing four (about 30% faster on those bubbles, occasionally less accurate)
+        </label>
+      </section>
+
+      <section>
+        <h2>Saved dimensions</h2>
+        <div id="sites"></div>
+        <button type="button" id="forget-all" hidden>Forget all sites</button>
+      </section>
+
+      <section>
+        <h2>Developer</h2>
+        <label class="check">
+          <input id="dev-mode" type="checkbox" />
+          Developer mode — show the panel picker, Auto / OCR test, overlay and boxes buttons, engine and session details in
+          the popup
+        </label>
+      </section>
+    </main>
+    <script src="settings.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>

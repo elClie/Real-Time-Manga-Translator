@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Panel Probe</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="bar">
+      <button type="button" id="scan" title="Scan the page again">Scan</button>
+      <button type="button" id="auto" class="dev-only" disabled>Auto ▶</button>
+      <button type="button" id="dry" class="dev-only" disabled title="Run Auto up to OCR (no Gemini) and time it">OCR ⏱</button>
+      <button type="button" id="translate" disabled>Translate</button>
+      <button type="button" id="toggle" class="dev-only">Overlay</button>
+      <button type="button" id="boxes" class="dev-only" title="Show what detection found: bubbles, textlines, dropped lines">Boxes</button>
+      <button type="button" id="clear">Clear</button>
+      <button type="button" id="settings" class="icon" title="Settings">⚙</button>
+    </div>
+    <p id="app" class="app">Checking…</p>
+    <p id="session" class="app dev-only" hidden></p>
+    <p id="progress" class="app user-only" hidden></p>
+    <div id="site" class="site" hidden>
+      <span id="site-text" class="dev-only"></span>
+      <span class="user-only site-hint">Translating these images — not manga panels?</span>
+      <button type="button" id="recalibrate">Recalibrate</button>
+    </div>
+    <p id="status" class="status" hidden></p>
+    <section id="calibrate" hidden>
+      <h3>Which one looks most like a manga page?</h3>
+      <p id="cal-hint" class="hint"></p>
+      <div id="cal-grid"></div>
+    </section>
+    <div id="panels-bar" class="panels-bar dev-only" hidden>
+      <span id="meta"></span>
+      <button type="button" id="sel-visible">Visible</button>
+      <button type="button" id="sel-all">All</button>
+      <button type="button" id="sel-none">None</button>
+    </div>
+    <div id="panels"></div>
+    <script src="settings.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
