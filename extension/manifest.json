@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Panel Probe (in-browser)",
+  "name": "Real-Time Manga Translator",
   "version": "0.9.0",
   "description": "Scan manga reader panels, read them with an in-browser OCR pipeline, translate with Gemini, overlay the text.",
   "permissions": ["activeTab", "scripting", "storage", "offscreen", "declarativeNetRequestWithHostAccess"],
@@ -9,7 +9,7 @@
     "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
   },
   "action": {
-    "default_title": "Panel Probe (in-browser)",
+    "default_title": "Real-Time Manga Translator",
     "default_popup": "popup.html"
   },
   "options_ui": {
