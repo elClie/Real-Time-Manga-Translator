@@ -1,0 +1,88 @@
+Real-Time Manga Translator
+Copyright (C) 2026 elClie
+
+This program is free software: you can redistribute it and/or modify it under the terms of the
+GNU General Public License version 3 as published by the Free Software Foundation (see LICENSE).
+It is distributed WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.
+
+The full texts of the other licenses named below are in the licenses/ folder.
+
+
+PORTED SOURCE CODE
+==================
+
+manga-image-translator (GPL-3.0)
+  https://github.com/zyddnys/manga-image-translator
+  pipeline/detect.js, pipeline/ocr.js, pipeline/merge.js, pipeline/quad.js, pipeline/pyset.js and
+  parts of pipeline/text.js and pipeline/analyze.js are JavaScript ports of its text detection
+  post-processing, OCR step, text-line merging, Quadrilateral geometry and text filters.
+  Modified in 2026 by elClie: rewritten in JavaScript for in-browser use with ONNX Runtime Web.
+
+manga-ocr (Apache-2.0), Copyright Maciej Budyś
+  https://github.com/kha-white/manga-ocr
+  pipeline/mocr.js ports its text post-processing. Modified in 2026 by elClie: rewritten in
+  JavaScript. Its beam-search decoding reproduces the generation settings of Hugging Face
+  transformers (Apache-2.0).
+
+jaconv (MIT), Copyright (c) 2014 Yukino Ikegami
+  https://github.com/ikegami-yukino/jaconv
+  pipeline/mocr.js reimplements its half-width to full-width conversion (h2z).
+
+py3langid (BSD-3-Clause), Copyright (c) 2021 Adrien Barbaresi; original code Copyright (c) 2011
+Marco Lui
+  https://github.com/adbar/py3langid
+  pipeline/text.js reimplements its language identifier.
+
+Emscripten (MIT)
+  https://github.com/emscripten-core/emscripten
+  tools/build_ext.mjs contains replacements for embind invoker functions adapted from
+  Emscripten-generated code, so the vendored WebAssembly glue runs under the extension's CSP.
+
+
+MODELS (release asset models.zip, not stored in this repository)
+=================================================================
+
+det16.onnx, det16.bin: text detector (DBNet) from manga-image-translator, GPL-3.0.
+  Converted to ONNX by elClie.
+
+PP-OCRv6_small_rec_top1.onnx, ppocrv6_dict.txt: text-line recognizer from PaddleOCR, Apache-2.0,
+  Copyright PaddlePaddle Authors. https://github.com/PaddlePaddle/PaddleOCR
+  Modified by elClie: the output head returns the per-step top-1 index and score.
+
+mocr_encoder_fp16.onnx, mocr_decoder_fp16.onnx, mocr_vocab.json: manga-ocr-base, Apache-2.0,
+  Copyright Maciej Budyś. https://huggingface.co/kha-white/manga-ocr-base
+  Converted to ONNX (FP16) by elClie.
+
+langid.bin, langid.json: the py3langid language model, BSD-3-Clause (see above).
+  Converted to a binary layout by elClie.
+
+unicode_tables.json: character-class tables generated from Python's Unicode data and cp932 codec.
+
+panels.onnx: manga panel and text detector by Leandro Narosky, AGPL-3.0.
+  https://huggingface.co/leoxs22/manga-panel-detector-yolo26n
+  Fine-tuned from Ultralytics YOLO26 (Copyright Ultralytics, AGPL-3.0). Converted to ONNX by
+  elClie. Combining this AGPL-3.0 model with this GPL-3.0 program is permitted by section 13 of
+  both licenses; the model itself remains under AGPL-3.0.
+
+  This model was trained on the Manga109-s dataset:
+    K. Aizawa, A. Fujimoto, A. Otsubo, T. Ogawa, Y. Matsui, K. Tsubota, H. Ikuta, "Building a
+    Manga Dataset 'Manga109' with Annotations for Multimedia Applications", IEEE MultiMedia,
+    27(2), pp. 8-18, 2020. doi:10.1109/mmul.2020.2987895
+  No Manga109-s images or annotations are included in this repository or its releases.
+
+
+RUNTIME DEPENDENCIES (installed by npm, not stored in this repository)
+=====================================================================
+
+onnxruntime-web (MIT), Copyright Microsoft Corporation
+@techstark/opencv-js (Apache-2.0), OpenCV
+clipper-lib (Boost Software License 1.0), JavaScript port of Angus Johnson's Clipper
+
+
+THIRD-PARTY SERVICES
+====================
+
+Translation uses the Google Gemini API with the user's own API key, under Google's terms.
+This project is not affiliated with or endorsed by any manga publisher or reading site. Use it
+only for content you have legitimate access to, and respect the terms of the sites you read on.

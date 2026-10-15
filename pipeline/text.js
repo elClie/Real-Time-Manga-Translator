@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-only
 // Python / MIT text rules, driven by tables exported from the app's Python (tools/export_tables.py):
 // str.strip / str.split whitespace, generic2.is_valuable_text, cp932 encodability, py3langid.
 

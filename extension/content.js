@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-only
 (() => {
   const MIN_SIDE = 120;
   const MIN_AREA = 120 * 120;

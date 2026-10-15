@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-only
 // Browser version of the app's POST /analyze: detect → OCR → merge → manga-ocr reread → bubbles.
 // Same output shape as Analyzer.analyze (width, height, regions, det_lines, stage_ms, total_ms).
 

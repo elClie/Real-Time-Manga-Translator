@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-only
 /**
  * Shared by popup + options: extension storage and site calibration ("which images are the pages").
  *

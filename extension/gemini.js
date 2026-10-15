@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-only
 // Batched Gemini translation over REST (port of app/gemini_client.py).
 // Model fallback chain with a per-call timeout (single models regularly stall or 503);
 // non-urgent calls start at least MIN_INTERVAL_MS apart, urgent calls skip the wait.

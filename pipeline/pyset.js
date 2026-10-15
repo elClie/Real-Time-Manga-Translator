@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-only
 // Python container semantics the MIT merge code depends on. Its graph code iterates Python sets
 // and networkx adjacency dicts, and ties in its sorts / majority votes are broken by that order.
 

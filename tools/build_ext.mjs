@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-only
 // Assembles the loadable extension in dist/extension: extension/ + pipeline/ + vendor libs + models.
 // Big files (models, wasm) are hard links, so the ~0.6 GB costs no extra disk; sources are copied.
 // usage: npm install && node tools/build_ext.mjs   then load dist/extension unpacked in chrome://extensions

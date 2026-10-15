@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-only
 // MIT utils/generic.py Quadrilateral + quadrilateral_can_merge_region, and the shapely bits they use.
 // MIT keeps corner points as ints and structure norms as float32 (float32 / float32 stays float32,
 // float32 with a Python scalar becomes float64); Math.fround reproduces the float32 steps.

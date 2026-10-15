@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-only
 const keyInput = document.getElementById("key");
 const keyStatus = document.getElementById("key-status");
 const appStatus = document.getElementById("app-status");

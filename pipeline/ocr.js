@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-only
 // MIT OCR step as the app runs it with PANEL_OCR=paddle (paddle_rec._paddle_infer):
 // CommonOCR._generate_text_direction → Quadrilateral.get_transformed_region (48 px strips) →
 // restack_glyphs for vertical columns → PP-OCRv6 recognizer + CTC decode → MIN_CONF / empty filters.

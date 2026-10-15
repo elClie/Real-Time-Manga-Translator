@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-only
 import { Gemini } from "./gemini.js";
 
 const ENGINE_TIMEOUT_MS = 150_000;

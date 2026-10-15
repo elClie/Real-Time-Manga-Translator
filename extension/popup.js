@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-only
 const appEl = document.getElementById("app");
 const metaEl = document.getElementById("meta");
 const statusEl = document.getElementById("status");

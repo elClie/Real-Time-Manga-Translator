@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-only
 // MIT default detector as the app runs it (det_speedups._fast_infer, no bilateral filter):
 // resize + reflect margin → DBNet probability map (models/det*.onnx) → SegDetectorRepresenter
 // boxes_from_bitmap → page coordinates → CommonDetector filters / small-image border.

@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-only
 // app/bubbles.py: speech-bubble geometry by flood fill (region.bubble = { poly, inner, fill, id }).
 
 import { pyRound } from "./quad.js";

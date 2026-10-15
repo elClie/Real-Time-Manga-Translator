@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-only
 // Bubbles cut by the boundary between two stacked strips (webtoon slices); port of app/seams.py.
 //
 // Each strip is analyzed alone, so a bubble crossing the boundary comes out as two broken halves.

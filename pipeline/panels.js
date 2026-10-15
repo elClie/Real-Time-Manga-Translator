@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-only
 // Manga panel detector for calibration: leoxs22/manga-panel-detector-yolo26n (YOLO26-nano trained on
 // Manga109-s; classes 0 panel, 1 text), exported to ONNX at 640x640 → [1, 6, 8400] (cx, cy, w, h, panel,
 // text). It tells a site's manga pages apart from its covers, banners, photos and thumbnails.

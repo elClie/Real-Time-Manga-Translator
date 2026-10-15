@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-only
 // MIT textline_merge (merge_bboxes_text_region / split_text_region / dispatch) and the rest of
 // MangaTranslator._run_textline_merge: bracket fix, is_valuable_text + English filters, simple sort.
 // Plus app/geom.py region_to_dict.

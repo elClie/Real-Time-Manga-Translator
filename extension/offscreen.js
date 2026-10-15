@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-only
 // The in-browser replacement for the local app's POST /analyze: runs the pipeline (webport/pipeline)
 // and keeps the app's page cache, re-analysis rules and seam pass. Talks only to the service worker.
 import * as ort from "./vendor/onnxruntime-web/dist/ort.webgpu.min.mjs";

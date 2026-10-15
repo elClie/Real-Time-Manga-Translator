@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-only
 // app/manga_ocr_rec.py: manga-ocr re-reads bubbles when some Paddle text on the page looks wrong.
 // Encoder/decoder ONNX exports (tools/export_mocr.py); decoding mirrors HF generate() with the model's
 // generation config (4 beams, early stopping, length penalty 2, no repeated trigrams, max 300).
